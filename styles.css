@@ -90,6 +90,7 @@ h6 {
 
 #logo-img {
   width: 1.4em;
+  fill: white;
 }
 
 .logo {
@@ -97,8 +98,37 @@ h6 {
   font-size: 1.7rem;
   padding: 1rem 0;
   justify-content: center;
+  color: white;
 }
 
 .main-content-container svg {
   width: 1.4em;
+}
+
+.main-nav ul li,
+.secondary-nav ul li {
+  fill: white;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.main-nav ul li a,
+.secondary-nav ul li a {
+  color: white;
+  text-decoration-line: none;
+}
+
+.main-nav ul li a:hover,
+.secondary-nav ul li a:hover {
+  color: rgb(205, 205, 205);
+  text-decoration-line: underline;
+}
+
+.main-nav ul li svg,
+.secondary-nav ul li svg {
+  margin-right: 1rem;
+}
+
+#svg-logo {
+  fill: white;
 }
