@@ -76,7 +76,7 @@ h6 {
 
 .container {
   display: grid;
-  grid-template-columns: 300px 1fr; /* Fixed sidebar width */
+  grid-template-columns: 300px 1fr; 
   min-height: 100vh;
   background-color: #e2e8f0;
 }
@@ -84,11 +84,11 @@ h6 {
 .sidebar {
   display: grid;
   grid-template-rows: auto auto 1fr;
-  background-color: #1992d4; /* Updated blue color matching the attachment */
+  background-color: #1992d4;
   color: white;
   padding: 1rem 2rem;
-  gap: 3rem; /* Add space between sections */
-  min-height: 100vh; /* Ensure it fills the full height */
+  gap: 3rem;
+  min-height: 100vh; 
 }
 
 .branding {
@@ -137,14 +137,14 @@ h6 {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem; /* More consistent spacing between items */
+  gap: 1.2rem; 
 }
 
 .nav-menu ul li,
 .secondary-nav ul li {
   display: flex;
   align-items: center;
-  margin-bottom: 0; /* Remove margin, using gap instead */
+  margin-bottom: 0; 
   font-size: 1.3rem;
   font-weight: bold;
 }
@@ -168,18 +168,9 @@ h6 {
   color: #e2e8f0;
 }
 
-/* Add proper spacing between nav sections */
 .secondary-nav {
   margin-top: 2rem;
 }
-
-/* .header {
-  display: grid;
-  grid-template: min-content 1fr / 1% min-content 3fr 1fr;
-  gap: 1rem;
-  padding: 1rem;
-  align-items: center;
-} */
 
 .header {
   display: grid;
