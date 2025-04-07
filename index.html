@@ -12,18 +12,15 @@
       <!-- Sidebar -->
       <div class="sidebar">
         <div class="branding">
-          <div class="logo">
-            <svg id="logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <title>code-braces</title>
-              <path
-                d="M8,3A2,2 0 0,0 6,5V9A2,2 0 0,1 4,11H3V13H4A2,2 0 0,1 6,15V19A2,2 0 0,0 8,21H10V19H8V14A2,2 0 0,0 6,12A2,2 0 0,0 8,10V5H10V3M16,3A2,2 0 0,1 18,5V9A2,2 0 0,0 20,11H21V13H20A2,2 0 0,0 18,15V19A2,2 0 0,1 16,21H14V19H16V14A2,2 0 0,1 18,12A2,2 0 0,1 16,10V5H14V3H16Z"
-              />
-            </svg>
+          <div class="sidebar-logo">
+            <a class="sidebar-logo-anchor" href="https://www.flaticon.com/free-icons/report" title="report icons"
+              ><img src="./assets/dashboard.png" alt="sidebar dashboard logo"
+            /></a>
             <h1>Dashboard</h1>
           </div>
         </div>
 
-        <nav class="main-nav">
+        <nav class="nav-menu">
           <ul>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -116,7 +113,7 @@
       <div class="main-content-container">
         <!-- Header -->
         <div class="header">
-          <div class="search-bar">
+          <div class="search-container">
             <svg id="magnifier" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>magnify</title>
               <path
@@ -126,26 +123,35 @@
             <input type="text" placeholder="Search..." />
           </div>
 
-          <div class="user-info">
+          <div class="notification-profile">
             <svg id="bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>bell</title>
               <path
                 d="M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M14,21A2,2 0 0,1 12,23A2,2 0 0,1 10,21"
               />
             </svg>
-            <img src="path-to-user-avatar.svg" alt="User avatar" class="user-avatar small" />
+            <div class="avatar-container">
+              <a href="https://www.flaticon.com/free-icons/user" title="user icons"
+                ><img src="./assets/avatar-icon.png" alt="User avatar" class="user-avatar small"
+              /></a>
+            </div>
             <p class="user-name">Morgan Oakley</p>
           </div>
 
           <div class="user-greeting">
-            <img src="path-to-user-avatar.svg" alt="User avatar" class="user-avatar large" />
+            <div class="avatar-container large">
+              <!-- <img src="path-to-user-avatar.svg" alt="User avatar" class="user-avatar large" /> -->
+              <a href="https://www.flaticon.com/free-icons/user" title="user icons"
+                ><img src="./assets/avatar-icon.png" alt="User avatar" class="user-avatar large"
+              /></a>
+            </div>
             <div class="greeting-text">
               <p>Hi there,</p>
               <h2>Morgan Oakley (@morgan)</h2>
             </div>
           </div>
 
-          <div class="buttons">
+          <div class="button-container">
             <button class="btn">New</button>
             <button class="btn">Upload</button>
             <button class="btn">Share</button>
@@ -164,9 +170,9 @@
                   nec.
                 </p>
                 <div class="card-actions">
-                  <img src="path-to-star-icon.svg" alt="Star icon" />
-                  <img src="path-to-watch-icon.svg" alt="Watch icon" />
-                  <img src="path-to-fork-icon.svg" alt="Fork icon" />
+                  <div class="icon-star"></div>
+                  <div class="icon-eye"></div>
+                  <div class="icon-fork"></div>
                 </div>
               </div>
 
@@ -177,9 +183,9 @@
                   sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius pellentesque lacus.
                 </p>
                 <div class="card-actions">
-                  <img src="path-to-star-icon.svg" alt="Star icon" />
-                  <img src="path-to-watch-icon.svg" alt="Watch icon" />
-                  <img src="path-to-fork-icon.svg" alt="Fork icon" />
+                  <div class="icon-star"></div>
+                  <div class="icon-eye"></div>
+                  <div class="icon-fork"></div>
                 </div>
               </div>
 
@@ -187,9 +193,9 @@
                 <h4>Impossible App</h4>
                 <p>In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit sagittis id.</p>
                 <div class="card-actions">
-                  <img src="path-to-star-icon.svg" alt="Star icon" />
-                  <img src="path-to-watch-icon.svg" alt="Watch icon" />
-                  <img src="path-to-fork-icon.svg" alt="Fork icon" />
+                  <div class="icon-star"></div>
+                  <div class="icon-eye"></div>
+                  <div class="icon-fork"></div>
                 </div>
               </div>
 
@@ -200,9 +206,9 @@
                   dignissim nisi in tortor commodo, ac bibendum magna tincidunt.
                 </p>
                 <div class="card-actions">
-                  <img src="path-to-star-icon.svg" alt="Star icon" />
-                  <img src="path-to-watch-icon.svg" alt="Watch icon" />
-                  <img src="path-to-fork-icon.svg" alt="Fork icon" />
+                  <div class="icon-star"></div>
+                  <div class="icon-eye"></div>
+                  <div class="icon-fork"></div>
                 </div>
               </div>
 
@@ -213,9 +219,9 @@
                   sed malesuada eros.
                 </p>
                 <div class="card-actions">
-                  <img src="path-to-star-icon.svg" alt="Star icon" />
-                  <img src="path-to-watch-icon.svg" alt="Watch icon" />
-                  <img src="path-to-fork-icon.svg" alt="Fork icon" />
+                  <div class="icon-star"></div>
+                  <div class="icon-eye"></div>
+                  <div class="icon-fork"></div>
                 </div>
               </div>
 
@@ -226,9 +232,9 @@
                   purus sit amet ex. Pellentesque mollis nec sem vel aliquam.
                 </p>
                 <div class="card-actions">
-                  <img src="path-to-star-icon.svg" alt="Star icon" />
-                  <img src="path-to-watch-icon.svg" alt="Watch icon" />
-                  <img src="path-to-fork-icon.svg" alt="Fork icon" />
+                  <div class="icon-star"></div>
+                  <div class="icon-eye"></div>
+                  <div class="icon-fork"></div>
                 </div>
               </div>
             </div>

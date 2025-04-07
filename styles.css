@@ -1,3 +1,15 @@
+.icon-star {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>');
+}
+
+.icon-eye {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>');
+}
+
+.icon-fork {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3v12"/><path d="M17 21v-8"/><path d="M7 15c0 1.1.9 2 2 2h6"/><path d="M17 13c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2s2 .9 2 2v6c0 1.1-.9 2-2 2z"/><path d="M7 3c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/><path d="M17 21c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>');
+}
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -64,19 +76,29 @@ h6 {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-}
-.sidebar {
-  display: grid;
-  background-color: #3292d4;
-  grid-template-rows: 10% 1fr 1fr;
+  grid-template-columns: 300px 1fr; /* Fixed sidebar width */
+  min-height: 100vh;
 }
 
-.main-nav svg {
+.sidebar {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  background-color: #1992d4; /* Updated blue color matching the attachment */
+  color: white;
+  padding: 1rem 2rem;
+  gap: 3rem; /* Add space between sections */
+  min-height: 100vh; /* Ensure it fills the full height */
+}
+
+.branding {
+  padding-top: 0.5rem;
+}
+
+.nav-menu svg {
   width: 1.4em;
 }
 
-.main-nav ul li {
+.nav-menu ul li {
   display: flex;
 }
 
@@ -88,47 +110,220 @@ h6 {
   display: flex;
 }
 
-#logo-img {
-  width: 1.4em;
+.sidebar-logo-anchor {
+  width: 3rem;
+  height: 3rem;
   fill: white;
 }
 
-.logo {
+.sidebar-logo {
   display: flex;
-  font-size: 1.7rem;
-  padding: 1rem 0;
-  justify-content: center;
-  color: white;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  padding: 0;
 }
 
-.main-content-container svg {
-  width: 1.4em;
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
-.main-nav ul li,
+/* Navigation lists */
+.nav-menu ul,
+.secondary-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* More consistent spacing between items */
+}
+
+.nav-menu ul li,
 .secondary-nav ul li {
-  fill: white;
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0; /* Remove margin, using gap instead */
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-.main-nav ul li a,
+.nav-menu svg,
+.secondary-nav svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: white;
+  margin-right: 1.2rem;
+}
+
+.nav-menu ul li a,
 .secondary-nav ul li a {
   color: white;
-  text-decoration-line: none;
+  text-decoration: none;
 }
 
-.main-nav ul li a:hover,
+.nav-menu ul li a:hover,
 .secondary-nav ul li a:hover {
-  color: rgb(205, 205, 205);
-  text-decoration-line: underline;
+  color: #e2e8f0;
 }
 
-.main-nav ul li svg,
-.secondary-nav ul li svg {
-  margin-right: 1rem;
+/* Add proper spacing between nav sections */
+.secondary-nav {
+  margin-top: 2rem;
 }
 
-#svg-logo {
-  fill: white;
+/* .header {
+  display: grid;
+  grid-template: min-content 1fr / 1% min-content 3fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+} */
+
+.header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* First row */
+.search-container {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  background-color: #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.search-container input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+#magnifier {
+  width: 24px;
+  height: 24px;
+  margin-left: 0.5rem;
+  color: #64748b;
+}
+
+.notification-profile {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#bell {
+  width: 24px;
+  height: 24px;
+  color: #1e293b;
+}
+
+.avatar-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fbbf24;
+}
+
+.avatar-container.large {
+  width: 70px;
+  height: 70px;
+}
+
+.user-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Second row */
+.user-greeting {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.greeting-text p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.greeting-text h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.button-container {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.btn {
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #0284c7;
+}
+
+/* Icons for card actions */
+.icon-star,
+.icon-eye,
+.icon-fork {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.main-content {
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+
+.projects-section {
+  margin-left: 0.5rem;
+}
+
+.projects-section h3,
+.sidebar-content h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
