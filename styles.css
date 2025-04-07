@@ -254,6 +254,11 @@ h6 {
   object-fit: cover;
 }
 
+.user-avatar.small {
+  width: 35px;
+  height: 35px;
+}
+
 .user-name {
   font-weight: bold;
   font-size: 1rem;
@@ -371,4 +376,58 @@ h6 {
   justify-content: flex-end;
   gap: 1.5rem;
   margin-top: 1rem;
+}
+
+/* Sidebar content */
+.announcement-container,
+.trending-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.announcement {
+  margin-bottom: 1rem;
+}
+
+.announcement h5 {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.announcement p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 1rem 0;
+}
+
+.trending-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.trending-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-name {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.trending-project {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #64748b;
 }
