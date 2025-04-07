@@ -76,7 +76,7 @@ h6 {
 
 .container {
   display: grid;
-  grid-template-columns: 300px 1fr; 
+  grid-template-columns: 300px 1fr;
   min-height: 100vh;
   background-color: #e2e8f0;
 }
@@ -88,7 +88,7 @@ h6 {
   color: white;
   padding: 1rem 2rem;
   gap: 3rem;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 .branding {
@@ -137,14 +137,14 @@ h6 {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem; 
+  gap: 1.2rem;
 }
 
 .nav-menu ul li,
 .secondary-nav ul li {
   display: flex;
   align-items: center;
-  margin-bottom: 0; 
+  margin-bottom: 0;
   font-size: 1.3rem;
   font-weight: bold;
 }
@@ -232,6 +232,9 @@ h6 {
   border-radius: 50%;
   overflow: hidden;
   background-color: #fbbf24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .avatar-container.large {
